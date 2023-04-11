@@ -10,9 +10,9 @@ const Counter = () => {
 
   // grabbing the part of the state that we need to use in this component;
   // redux automatically subscribes and will now update this component for us every time the counter var changes
-  const counter = useSelector((state) => state.counter);
+  const counter = useSelector((state) => state.counter.counter);
 
-  const show = useSelector((state) => state.showCounter);
+  const show = useSelector((state) => state.counter.showCounter);
 
   const incrementHandler = () => {
     dispatch(counterActions.increment());
